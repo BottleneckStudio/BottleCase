@@ -1,0 +1,43 @@
+/* image fitter */
+.image {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin: 0px auto;
+  overflow: hidden;
+  position: relative; }
+  .image .vertimg {
+    position: absolute;
+    height: 100%;
+    width: auto;
+    top: 0; }
+  .image .horzimg {
+    position: absolute;
+    height: auto;
+    width: 100%;
+    left: 0; }
+  .image .loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; }
+    .image .loader.active {
+      display: none; }
+    .image .loader .spinner {
+      width: 10px;
+      height: 10px;
+      border-left: 5px solid rgba(0, 0, 0, 0.2);
+      border-right: 5px solid transparent;
+      border-bottom: 5px solid rgba(0, 0, 0, 0.2);
+      border-top: 5px solid rgba(0, 0, 0, 0.2);
+      border-radius: 100%;
+      animation: spinner 0.5s infinite;
+      margin: auto;
+      position: relative;
+      top: calc(100% / 2); }
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(361deg); } }
